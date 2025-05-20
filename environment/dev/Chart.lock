@@ -1,0 +1,9 @@
+dependencies:
+- name: common
+  repository: file://../../common
+  version: 0.1.0
+- name: test
+  repository: file://../../services/test
+  version: 0.1.0
+digest: sha256:4c45d32c0699ae48ac75ebfb164cf3606eedc06221bc1f791a20cc6092c9068b
+generated: "2025-05-20T10:48:17.906093+09:00"

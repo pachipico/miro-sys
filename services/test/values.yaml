@@ -1,0 +1,11 @@
+name: test
+
+service:
+  type: ClusterIP
+  port: 8080
+
+image:
+  repository: pachipico/test
+  tag: latest
+
+replicaCount: 1

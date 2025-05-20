@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Values.service.name }}-log-pvc
+  labels:
+    type: local
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: miro-{{ .Values.service.name }}
+    meta.helm.sh/release-namespace: default
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 8Gi
+  volumeName: {{ .Values.service.name }}-log-pv
+  selector:
+    matchLabels:
+      type: local
