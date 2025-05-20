@@ -25,9 +25,9 @@ spec:
             - name: {{ .Values.service.name }}-log
               mountPath: /log
       volumes:
-        - name: { { .Values.service.name } }-log
+        - name: {{ .Values.service.name }}-log
           persistentVolumeClaim:
-            claimName: { { .Values.service.name } }-log-pvc
+            claimName: {{ .Values.service.name }}-log-pvc
   strategy:
     blueGreen:
       activeService: {{ .Values.service.name }}-active
