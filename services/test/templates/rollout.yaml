@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Values.service.name }}
   labels:
-    app: {{ .Release.Name }}
+    app: {{ .Values.service.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: {{ .Values.service.name }}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        app: {{ .Values.service.name }}
     spec:
       containers:
         - name: {{ .Values.service.name }}
