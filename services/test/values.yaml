@@ -1,6 +1,7 @@
 name: test
 
 service:
+  name: test
   type: ClusterIP
   port: 8080
 
