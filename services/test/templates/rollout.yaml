@@ -21,8 +21,15 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.service.port }}
+          volumeMounts:
+            - name: {{ .Values.service.name }}-log
+              mountPath: /log
   strategy:
     blueGreen:
       activeService: {{ .Values.service.name }}-active
       previewService: {{ .Values.service.name }}-preview
       autoPromotionEnabled: false
+  volumes:
+    - name: {{ .Values.service.name }}-log
+      persistentVolumeClaim:
+        claimName: {{ .Values.service.name }}-log-pvc
