@@ -24,12 +24,12 @@ spec:
           volumeMounts:
             - name: {{ .Values.service.name }}-log
               mountPath: /log
+      volumes:
+        - name: { { .Values.service.name } }-log
+          persistentVolumeClaim:
+            claimName: { { .Values.service.name } }-log-pvc
   strategy:
     blueGreen:
       activeService: {{ .Values.service.name }}-active
       previewService: {{ .Values.service.name }}-preview
       autoPromotionEnabled: false
-  volumes:
-    - name: {{ .Values.service.name }}-log
-      persistentVolumeClaim:
-        claimName: {{ .Values.service.name }}-log-pvc
