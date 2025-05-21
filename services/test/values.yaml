@@ -7,7 +7,7 @@ service:
 
 image:
   repository: pachipico/test
-tag: '882019e'
+tag: '04f022d'
 
 replicaCount: 1
 
