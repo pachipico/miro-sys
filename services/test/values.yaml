@@ -7,7 +7,7 @@ service:
 
 image:
   repository: pachipico/test
-tag: latest
+tag: 'c735f42'
 
 replicaCount: 1
 
