@@ -7,6 +7,6 @@ service:
 
 image:
   repository: pachipico/test
-  tag: latest
+tag: latest
 
 replicaCount: 1
