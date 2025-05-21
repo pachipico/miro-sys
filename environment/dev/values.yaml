@@ -7,4 +7,4 @@ global:
 #  sslPath: /root/kubernetes/ssl
 #  awsPath: /root/.aws
 
-tag: ''
+tag: '9ce796b'
