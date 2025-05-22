@@ -33,3 +33,5 @@ spec:
       activeService: {{ .Values.service.name }}-active
       previewService: {{ .Values.service.name }}-preview
       autoPromotionEnabled: true
+      scaleDownDelaySeconds: 30
+      scaleDownDelayRevisionLimit: 1
