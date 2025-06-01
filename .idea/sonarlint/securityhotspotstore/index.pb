@@ -1,0 +1,15 @@
+
+c
+3services/frontend-template/templates/configmap.yaml,2/2/22b0bf1b4e96e315358ba9ad7d4f2188c2b9b07e
+a
+1services/frontend-template/templates/rollout.yaml,2/b/2b72fb5f6879180e8d90577512c7b903b38f0627
+a
+1services/frontend-template/templates/service.yaml,9/b/9bef3229b44e24930a4ac8f5f0e3099012a20fe2
+e
+5services/frontend-template/templates/test-log-pv.yaml,4/f/4f20397feeb4c151c4c44c656dbda820ca175fa4
+U
+%services/frontend-template/Chart.yaml,e/b/ebe33101c77cbe6e6b050a1b5f56c9773e6edf34
+V
+&services/frontend-template/values.yaml,0/1/013654dc12b1f400f31ffa95fe1fa762d06cb09a
+U
+%services/frontend-template/Chart.lock,3/9/398d99e71a69465b83c53681b6b083a14b63b535

@@ -1,0 +1,18 @@
+name: test
+
+service:
+  name: test
+  type: ClusterIP
+  port: 8080
+
+image:
+  repository: pachipico/frontend-template
+tag: 'cfc167e'
+
+replicaCount: 1
+
+global:
+  #  configMapName: dev-configmap
+  activeProfile: local
+  #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
+  logPath: /root/logs

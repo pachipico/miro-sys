@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: {{ .Values.service.name }}
+  labels:
+    app: {{ .Values.service.name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: {{ .Values.service.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.service.name }}
+    spec:
+      containers:
+        - name: {{ .Values.service.name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          volumeMounts:
+            - name: {{ .Values.service.name }}-log
+              mountPath: /log
+      volumes:
+        - name: {{ .Values.service.name }}-log
+          persistentVolumeClaim:
+            claimName: {{ .Values.service.name }}-log-pvc
+  strategy:
+    blueGreen:
+      activeService: {{ .Values.service.name }}-active
+      previewService: {{ .Values.service.name }}-preview
+      autoPromotionEnabled: true
+      scaleDownDelaySeconds: 30
+      scaleDownDelayRevisionLimit: 1
