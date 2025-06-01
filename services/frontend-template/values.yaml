@@ -1,9 +1,9 @@
 name: test
 
 service:
-  name: test
+  name: frontend-template
   type: ClusterIP
-  port: 8080
+  port: 3000
 
 image:
   repository: pachipico/frontend-template
