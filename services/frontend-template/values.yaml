@@ -1,4 +1,4 @@
-name: test
+name: frontend-template
 
 service:
   name: frontend-template
