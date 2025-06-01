@@ -15,3 +15,5 @@ U
 %services/frontend-template/Chart.lock,3/9/398d99e71a69465b83c53681b6b083a14b63b535
 f
 6services/frontend-template/templates/test-log-pvc.yaml,a/b/ab51d460ba8cd1f237bf7e90f13238e93b5b72d0
+I
+services/test/values.yaml,0/e/0ead0462e1a81f2063460bbf9850cb8a6191576f

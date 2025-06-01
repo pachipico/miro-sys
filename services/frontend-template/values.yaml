@@ -7,7 +7,7 @@ service:
 
 image:
   repository: pachipico/frontend-template
-tag: 'cfc167e'
+tag: 'latest'
 
 replicaCount: 1
 
