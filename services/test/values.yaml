@@ -7,7 +7,7 @@ service:
 
 image:
   repository: pachipico/test
-tag: '8cd70bb'
+tag: '211468f'
 
 replicaCount: 1
 
