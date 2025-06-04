@@ -10,7 +10,7 @@ spec:
     - host: front.miro-sys.kro.kr
       http:
         paths:
-          - path: /front
+          - path: /
             pathType: Prefix
             backend:
               service:
