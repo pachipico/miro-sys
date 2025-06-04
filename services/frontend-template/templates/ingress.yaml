@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.service.name }}-ingress
+  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: front.miro-sys.kro.kr
+      http:
+        paths:
+          - path: /front
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.service.name }}-active
+                port:
+                  number: 3000

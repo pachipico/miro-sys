@@ -10,7 +10,7 @@ spec:
     - host: api.miro-sys.kro.kr
       http:
         paths:
-          - path: /test
+          - path: /api
             pathType: Prefix
             backend:
               service:

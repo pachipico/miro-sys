@@ -1,7 +1,7 @@
-name: test
+name: backend-template
 
 service:
-  name: test
+  name: backend-template
   type: ClusterIP
   port: 8080
 
